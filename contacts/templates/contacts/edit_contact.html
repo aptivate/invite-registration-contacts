@@ -1,0 +1,15 @@
+{% extends "contacts/contacts_base.html" %}
+
+{#% load assets %#}
+{% load i18n %}
+{% load basename %}
+
+{% block title %}{% trans "Update personal information" %}{% endblock %}
+
+{% block main_content %}
+    {% include "contacts/fragments/edit_contact_form.html" %}
+{% endblock %}
+
+{% block sidebar %}
+    {% include "contacts/fragments/edit_contact_secondary.html" %}
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends "contacts/contacts_base.html" %}
+
+{% load i18n %}
+
+{% block title %}{% trans "Delete a contact" %}{% endblock %}
+
+{% block main_content %}
+    {% include "contacts/fragments/delete_contact_form.html" %}
+{% endblock %}

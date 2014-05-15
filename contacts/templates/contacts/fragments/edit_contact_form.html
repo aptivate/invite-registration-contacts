@@ -1,0 +1,32 @@
+{% load i18n %}
+<form action="" method="post" class="pure-form pure-form-stacked" enctype="multipart/form-data" id="contact-form">
+    {% csrf_token %}
+
+{# COMMON #}
+
+    <fieldset class="section-common">
+        <h3>{% trans "Personal information" %}</h3>
+        {% with form=form %}
+            {% include "contacts/form_snippet.html" %}
+        {% endwith %}
+    </fieldset>
+
+{# ACTION CONTROLS #}
+    <fieldset>
+        <div class="pure-control-group">
+            <button type="submit" class="pure-button pure-button-primary">{% trans "Save contact" %}</button>
+            {% if not object.has_usable_password and object.business_email %}
+            <button type="submit" name="save-and-email" class="pure-button pure-button-secondary">{% trans "Send invitation" %}</button>
+            {% endif %}
+
+            {% if perms.contacts.add_user %}
+            <a href="{% url "contact_list" %}" class="pure-button">{% trans "Back to contact list" %}</a>
+            {% endif %}
+        </div>
+    </fieldset>
+    {% if object and perms.contacts.delete_user %}
+    <p>{% url "contact_delete" object.id as delete_url %}
+    {% blocktrans %}You can also <a href="{{ delete_url }}">delete this contact</a>.{% endblocktrans %}
+    </p>
+    {% endif %}
+</form>

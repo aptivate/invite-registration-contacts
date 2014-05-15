@@ -1,0 +1,8 @@
+django-braces==1.4.0
+django-floppyforms==1.1.1
+django-form-utils==1.0.1
+django-sortable-listview==0.23
+-e git+https://github.com/aptivate/django-spreadsheetresponsemixin.git@4d5ba33c9510e9855ee5babaeb2fd1f82f8086a6#egg=django_spreadsheetresponsemixin-master
+django-tables2==0.15.0
+pytest==2.5.2
+pytest-django==2.6.1

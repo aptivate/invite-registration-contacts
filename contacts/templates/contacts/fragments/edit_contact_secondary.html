@@ -1,0 +1,15 @@
+{% load i18n %}
+    {% if not object.has_usable_password and object.business_email %}
+    <p>
+        {% trans "Account not claimed" %}
+        <button data-form="#contact-form" type="submit" name="save-and-email" class="remote-submit pure-button pure-button-secondary">{% trans "Send invitation" %}</button><br />
+        This will also save any changes to your contact form
+    </p>
+    {% endif  %}
+
+    {% if object %}
+        {% if object.id == request.user.id %}
+    <p><a href="{% url "password_change" %}">{% trans "Change password" %}</a></p>
+        {% endif %}
+
+        {% endif %} {# endif object #}

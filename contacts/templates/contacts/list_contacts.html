@@ -1,0 +1,9 @@
+{% extends "contacts/contacts_base.html" %}
+
+{% load i18n %}
+
+{% block title %}{% trans "People" %}{% endblock %}
+
+{% block main_content %}
+    {% include "contacts/fragments/list_contacts_form.html" %}
+{% endblock %}
