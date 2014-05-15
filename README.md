@@ -1,7 +1,7 @@
 invite-registration-contacts
 ============================
 
-A companion app to invite-registration for basic management of users outside of Django's admin interface. invite-registration is a Django app for managing users and their registration when you need to control creation of accounts, but it is up to users to activate them by creating passwords.
+A companion app to [invite-registration](https://github.com/aptivate/invite-registration) for basic management of users outside of Django's admin interface. invite-registration is a Django app for managing users and their registration when you need to control creation of accounts, but it is up to users to activate them by creating passwords.
 
 invite-registration-contacts adds a role of contact manager so adding, updating, removing and inviting users can be done outside of the admin interface.
 
