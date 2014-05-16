@@ -89,7 +89,7 @@ class UpdateContactForm(AddContactForm):
                             new_address,
                             subject='{0}: email change notification'.format(
                                 settings.SITE_NAME),
-                            template_name='contacts/email/email_changed_body.email'):
+                            template_name='registration/email/email_changed_body.email'):
         ctx = {
             'user': self.instance,
             'old_email': old_address,

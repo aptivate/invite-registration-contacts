@@ -1,13 +1,10 @@
 # coding=utf-8
 from __future__ import unicode_literals
 import pytest
-import mock
 
-from django.conf import settings
 from django.core import mail
 
 from contacts.forms import UpdateContactForm
-from registration.views import SendActivationEmailView
 
 from .factories import UserFactory
 
